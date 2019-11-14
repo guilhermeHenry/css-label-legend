@@ -1,0 +1,16 @@
+{
+  "name": "css-label-legend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "css-reset": "git+https://github.com/guilhermeHenry/css-reset.git",
+    "oocss": "git+https://github.com/guilhermeHenry/oocss.git"
+  }
+}

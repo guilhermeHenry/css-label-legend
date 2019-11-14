@@ -1,0 +1,98 @@
+/*https://css-tricks.com/float-labels-css/*/
+body{font-family: roboto;}
+
+/**
+* Make the field a flex-container, reverse the order so label is on top.
+*/
+form{width: 300px; margin: 100px auto;}
+
+.field {
+	float: left; margin: 20px; width: 100%; 
+	position: relative; border-radius: 3px;
+}
+
+.gray{background-color: #eee;}
+.white{background-color: white;}
+
+.field .legend{
+	position: absolute;
+	top: 50%;
+	left: 4px;
+	cursor: text;
+	height: 20px;
+	line-height: 20px;
+	font-size: 18px;
+	margin-top: -10px;
+}
+.gray .legend{left: 15px;}
+.white .legend{left: 15px;}
+
+.field input{
+	border: 0;
+	float: left; width: 100%; 
+	padding: 25px 5px 10px 0;
+	border: 2px solid transparent; border-radius: 3px;
+	border-bottom-color: #eee; background-color: transparent;
+}
+
+.gray input{padding-left: 15px;}
+.white input{padding-left: 15px; border-color: #eee; border-width: 1px;}
+
+.field input:focus {border-bottom-color: blue;}
+.white input:focus{border-bottom: 2px solid #eee;}
+
+
+input::-webkit-input-placeholder {opacity: 0;}
+input:focus::-webkit-input-placeholder {opacity: 1;}
+input:not(:placeholder-shown) + .legend,
+input:focus + .legend {
+	top: 0;
+	color: #666;
+	cursor: default;
+	font-weight: 500;
+	font-size: 12px;
+	margin-top: 6px;
+}
+
+input:focus + .legend{color: blue;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
