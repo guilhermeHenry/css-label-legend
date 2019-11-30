@@ -6,14 +6,14 @@ body{font-family: roboto;}
 */
 /*form{width: 300px; margin: 100px auto;}*/
 
-.field {
+[debug] .field {
 	float: left; 
 	margin: 20px;
 	width: 100%;
 	position: relative;
-	border-radius: 3px;
 }
 
+.field{float: left; width: 100%; position: relative;}
 .gray{background-color: #eee;}
 .white{background-color: white;}
 
@@ -63,12 +63,13 @@ body{font-family: roboto;}
 
 
 .near{
-	float: left;
-	width: 340px;
+	width: 600px;
 	
 }
 
 .content{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	float: left;
 	width: 100%;
 	border-radius: 5px;
@@ -76,8 +77,17 @@ body{font-family: roboto;}
 }
 
 .near .field{margin: 0;}
-.near .field input{padding-left: 10px;}
-.near .field:last-child input{border-bottom: 0;}
+.near .field input{padding-left: 10px; border-radius: 0;}
+.near .field:first-child{grid-column: 4 span;}
+
+.near .field:nth-child(3),
+.near .field:nth-child(6){border-left: 1px solid #ddd;}
+
+.near .field:nth-child(n+2):nth-child(-n+3){grid-column: 2 span;}
+.near .field:nth-child(4){grid-column: 4 span;}
+.near .field:nth-child(5){grid-column: 3 span;}
+.near .field:nth-child(7){grid-column: 4 span; border-bottom: 0;}
+
 .near .field .legend{left: 10px; font-weight: 300; font-size: 22px; color: #888;}
 
 .near button{
